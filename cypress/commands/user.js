@@ -1,4 +1,4 @@
-const url = require("url");
+require("url");
 
 Cypress.Commands.add("signInAs", (username, password) => {
   createRouteToParseApiServer('authenticate_user');
