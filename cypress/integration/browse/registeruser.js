@@ -1,10 +1,6 @@
 context('Register as new user', () => {
   const username = "new";
 
-  beforeEach(() => {
-    cy.visit('');
-  });
-
   it('Check a user can register, and sign in again, and the welcome screen is correct', () => {
     cy.registerNewUserAs(username);
 

@@ -23,3 +23,8 @@ import '../commands/browsegui/groups';
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+before(function () {
+  cy.log('Global test before: Getting api server path');
+  cy.getApiPath();
+});

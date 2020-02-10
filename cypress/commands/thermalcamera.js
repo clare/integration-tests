@@ -1,10 +1,11 @@
 const url = require("url");
+const names = require("./names");
 
 Cypress.Commands.add("createCamera", (cameraName, groupName) => {
   const urlParams = url.format({
-    pathname: 'create/' + cameraName,
+    pathname: 'create/' + names.getTestName(cameraName),
     query: {
-      'group-name': groupName,
+      'group-name': names.getTestName(groupName),
       'api-server' : Cypress.config('cacophony-api-server'),
     }
   });

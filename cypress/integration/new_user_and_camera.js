@@ -1,19 +1,10 @@
-
-const crypto = require("crypto");
-
 context('New User', () => {
-  const uniqueId =  crypto.randomBytes(2).toString('hex');
-  const username = "integrationtester"  +  uniqueId;
-  const password = 'p' + username;
-  const group = 'test' + uniqueId;
-  const camera = 'fake-' + group;
-
-  beforeEach(() => {
-    cy.visit('');
-  });
+  const username = "integration";
+  const group = 'int-test';
+  const camera = 'int-test';
 
   it('A new user can create an account, and a group', () => {
-    cy.registerNewUserAs(username, password);
+    cy.registerNewUserAs(username);
 
     cy.contains("Create a group").click();
     cy.createGroup(group);

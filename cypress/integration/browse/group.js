@@ -1,6 +1,6 @@
 const names = require("../../commands/names");
 
-describe('Group Admin pages', () => {
+describe('Group Admin Pages', () => {
 
   const Anna = "Anna";
   const FriendsForever = "Friends_forever";
@@ -12,7 +12,6 @@ describe('Group Admin pages', () => {
   const trashButton = '.trash-button';
 
   before(() => {
-    cy.getApiPath();
     cy.apiCreateUser(Anna);
   });
 
@@ -29,11 +28,12 @@ describe('Group Admin pages', () => {
     // check what it looks like before groups are added
     cy.checkOnGroupPage();
 
-    // cy.contains("You don't belong to any groups yet").should('be.visible');
-    // cy.contains("Groups link together devices with").should('be.visible');
-    // cy.contains("You don't belong to any groups yet").should('be.visible');
+    cy.contains("You don't belong to any groups yet").should('be.visible');
+    cy.contains("Groups link together devices with").should('be.visible');
+    cy.contains("You don't belong to any groups yet").should('be.visible');
 
     cy.createGroup(FriendsForever);
+    ffcreated = true;
 
     // check what page looks like after groups are added
     cy.get("h1").contains(names.getTestName(FriendsForever));
