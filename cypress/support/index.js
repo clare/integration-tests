@@ -14,9 +14,12 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import '../commands/user';
+import '../commands/general';
 import '../commands/thermalcamera';
-import '../commands/groups';
+import '../commands/api/users';
+import '../commands/api/camera';
+import '../commands/browsegui/user';
+import '../commands/browsegui/groups';
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
