@@ -108,7 +108,7 @@ describe('Group Admin Pages', () => {
   });
 
   function getUserRow(username) {
-    // just make sure we are actually targetting the row html first
+    // just make sure we are actually targeting the row html first
     cy.get(usersTable).contains(username).parent().should('match', 'tr');
     cy.get(usersTable).contains(username).parent().as(username);
     return '@' + username;

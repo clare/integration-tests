@@ -6,7 +6,7 @@ script:
 - npm run lint
 - cp cypress.json.TEMPLATE cypress.json
 # Create fake thermal camera server
-- git clone "https://github.com/clare/fake-thermal-camera"
+- git clone "https://github.com/TheCacophonyProject/fake-thermal-camera"
 - git clone "https://github.com/TheCacophonyProject/device-register"
 - cd fake-thermal-camera
 - ./run --background

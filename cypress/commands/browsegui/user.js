@@ -35,8 +35,6 @@ Cypress.Commands.add("registerNewUserAs", (username) => {
 });
 
 Cypress.Commands.add("onBeforeSignInAsOrRegister", (username) => {
-  console.log("onbeforesignin...");
-  console.log("type of " + typeof Cypress.config('cacophony-api-server'));
   if (typeof Cypress.config('cacophony-api-server') === 'undefined') {
     // first time for test.   Need to register user
     cy.registerNewUserAs(username);
