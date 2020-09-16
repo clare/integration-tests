@@ -12,8 +12,7 @@ describe('Group Admin Pages', () => {
   const trashButton = '.trash-button';
 
   before(() => {
-    // cy.apiCreateUser(Anna);
-    names.initializeTestNames('xydsfds');
+    cy.apiCreateUser(Anna);
   });
 
   beforeEach(() => {
