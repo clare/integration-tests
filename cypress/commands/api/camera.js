@@ -1,7 +1,8 @@
 const names = require("../names");
+const general = require("../general");
 
 Cypress.Commands.add("apiCreateCamera", (cameraName, group) => {
-  const devicesUrl = Cypress.config('cacophony-api-server') + '/api/v1/devices';
+  const devicesUrl = general.getTestApiUrl() + '/api/v1/devices';
   const password = 'p' + names.getTestName(cameraName);
 
   const data = {
