@@ -1,8 +1,9 @@
 const url = require("url");
 const names = require("../names");
+const general = require("../general");
 
 Cypress.Commands.add("apiCreateUser", (username) => {
-  const usersUrl = Cypress.config('cacophony-api-server') + '/api/v1/users';
+  const usersUrl = general.getTestApiUrl() + '/api/v1/users';
 
   const fullName = names.getTestName(username);
   const password = 'p' + fullName;

@@ -1,6 +1,8 @@
 const names = require("../names");
+const general = require("../general");
 
 Cypress.Commands.add("createGroup", (group) => {
+  general.getTestApiUrl();
   const fullGroupName = names.getTestName(group);
 
   cy.checkOnGroupPage();

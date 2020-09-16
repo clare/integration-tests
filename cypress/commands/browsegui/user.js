@@ -1,5 +1,6 @@
 require("url");
 const names = require("../names");
+const general = require("../general");
 
 const userMenu = '.dropdown.profile';
 
@@ -18,6 +19,7 @@ Cypress.Commands.add("signInAs", (username) => {
 });
 
 Cypress.Commands.add("registerNewUserAs", (username) => {
+  general.getTestApiUrl();
   const fullName = names.getTestName(username);
   const password = 'p' + fullName;
 
