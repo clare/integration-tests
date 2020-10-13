@@ -11,6 +11,7 @@ import '../commands/api/users';
 import '../commands/api/camera';
 import '../commands/browsegui/user';
 import '../commands/browsegui/groups';
+import '../commands/browsegui/recordings';
 
 before(function () {
   // This runs before each test file, eg once per file.

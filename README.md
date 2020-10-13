@@ -12,7 +12,7 @@ Licence | GNU General Public License v3.0 |
 ## Instructions
 By default the tests run against our test server interface.
 
-To run the tests against browse-test/api-test go to [Integration tests on Travis](https://travis-ci.com/TheCacophonyProject/integration-tests) and click _Restart build_
+To run all the tests against browse-test/api-test go to [Integration tests on Travis](https://travis-ci.com/TheCacophonyProject/integration-tests) and click _Restart build_
 
 ## Development Instructions
 To set up the tests on your own machine:
@@ -25,6 +25,7 @@ npm install
 npm run dev
 ```
 5.  Look for the [cypress](https://www.cypress.io/) interactive environment.
+6.  Go to [design](design.md) for some background on how the tests run.  
 
 ### Testing against your own code
 You can test against code running on any environment.
